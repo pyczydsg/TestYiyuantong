@@ -4,7 +4,11 @@
 </script>
 
 <template>
-现诊处方
+
+<el-button>新增处方</el-button>
+
+
+
 </template>
 
 <style scoped>

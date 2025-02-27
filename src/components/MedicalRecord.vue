@@ -23,51 +23,21 @@ const thisMR = reactive( {
 
 <template>
 
-<el-row>
-    <el-col :span="24" style="background: #6C6E72;">
-        <span>病人信息</span>
-    </el-col>
-    <el-col :span="6">
-        <el-text>门诊号：</el-text>
-        <el-text>{{ thisPatient.menZhenHao }}</el-text>
-    </el-col>
-    <el-col :span="4">
-        <el-text>姓名：</el-text>
-        <el-text>{{ thisPatient.name }}</el-text>
-    </el-col>
-    <el-col :span="4">
-        <el-text>性别：</el-text>
-        <el-text>{{ thisPatient.sex }}</el-text>
-    </el-col>
-    <el-col :span="4">
-        <el-text>年龄：</el-text>
-        <el-text>{{ thisPatient.age }}</el-text>
-    </el-col>
-    <el-col :span="4">
-        <el-text>医生：</el-text>
-        <el-text>{{ thisPatient.doc }}</el-text>
-    </el-col>
-    <el-col :span="6">
-        <el-text>病人ID：</el-text>
-        <el-text>{{ thisPatient.idcard }}</el-text>
-    </el-col>
-    <el-col :span="4">
-        <el-text>登记时间：</el-text>
-        <el-text>略</el-text>
-    </el-col>
-    <el-col :span="4">
-        <el-text>支付类型：</el-text>
-        <el-text>略</el-text>
-    </el-col>
-    <el-col :span="4">
-        <el-text>状态：</el-text>
-        <el-text>略</el-text>
-    </el-col>
-    <el-col :span="4">
-        <el-text>书写：</el-text>
-        <el-text>{{ thisPatient.doc }}</el-text>
-    </el-col>
+<el-row style="background: #6C6E72;">
+    <span>病人信息</span>
 </el-row>
+<el-descriptions column="5" border="true">
+    <el-descriptions-item label="门诊号：">{{ thisPatient.menZhenHao }}</el-descriptions-item>
+    <el-descriptions-item label="姓名：">{{ thisPatient.name }}</el-descriptions-item>
+    <el-descriptions-item label="性别：">{{ thisPatient.sex }}</el-descriptions-item>
+    <el-descriptions-item label="年龄：">{{ thisPatient.age }}</el-descriptions-item>
+    <el-descriptions-item label="医生：">{{ thisPatient.doc }}</el-descriptions-item>
+    <el-descriptions-item label="病人ID：">{{ thisPatient.idcard }}</el-descriptions-item>
+    <el-descriptions-item label="登记时间：">略</el-descriptions-item>
+    <el-descriptions-item label="支付类型：">略</el-descriptions-item>
+    <el-descriptions-item label="状态：">略</el-descriptions-item>
+    <el-descriptions-item label="书写：">{{ thisPatient.doc }}</el-descriptions-item>
+</el-descriptions>
 
 <el-row style="margin-top:2%">
     <el-col :span="24" style="background: #6C6E72;">
@@ -98,7 +68,7 @@ const thisMR = reactive( {
         <el-text>体检</el-text>
     </el-col>
     <el-col :span="24">
-        <el-input v-model="thisMR.ZhuShu" style="width: 100%" :autosize="{ minRows: 2}" type="textarea" placeholder="Please input" />
+        <el-input v-model="thisMR.TiJian.Remark" style="width: 100%" :autosize="{ minRows: 2}" type="textarea" placeholder="Please input" />
     </el-col>
     <el-col :span="24" style="margin-top:1%">
         <el-text>诊断</el-text>
